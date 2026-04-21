@@ -7,7 +7,7 @@ from app.injector import inject_errors_xml
 from app.style_guide import load_style_guide
 
 
-# 🔥 ADD THIS FUNCTION (for UI reuse)
+# for UI reuse
 def process_file(input_path, style_path, lang, output_path):
     tree = load_xml(input_path)
     paragraphs = extract_paragraphs(tree)
@@ -26,7 +26,7 @@ def process_file(input_path, style_path, lang, output_path):
     save_xml(tree, output_path)
 
 
-# 🔹 Existing CLI
+# Existing CLI
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=True)
@@ -38,7 +38,7 @@ def main():
 
     output = args.input.replace(".xml", ".corrected.xml")
 
-    # 🔥 Use reusable function
+    # reusable function
     process_file(args.input, args.style, args.lang, output)
 
     print(f"Done in {time.time()-start:.2f}s → {output}")
