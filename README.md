@@ -65,49 +65,55 @@ pip install -r requirements.txt
 ### 2. Add environment variables
 
 Create .env file:
-
+```env
 OPENROUTER_API_KEY=your_api_key_here
+```
 
 
 ▶️ Usage
 
 🔹 CLI
-python -m app.cli --input sample_input.xml --lang en --style "Style Guide.docx"
 
+```bash
+python -m app.cli --input sample_input.xml --lang en --style "Style Guide.docx"
+```
 Output:
 
 sample_input.corrected.xml
 
 🔹 UI (Recommended)
 
+```bash
 python -m streamlit run app/ui.py
+```
 
-Features:
+## ▶️ UI Features
 
-Upload XML + Style Guide
-View corrected XML
-Highlighted errors
-Before vs After comparison
-Download output
+- Upload XML + Style Guide  
+- View corrected XML  
+- Highlighted errors  
+- Before vs After comparison  
+- Download output  
 
-🧠 LLM Strategy
+## 🧠 LLM Strategy
 
-Prompt engineering to enforce minimal edits
-Strict JSON output format
-Post-processing layer to:
-Remove duplicates
-Filter hallucinations
-Enforce constraints (length, semantics)
-Deterministic XML transformation
+- Prompt engineering to enforce minimal edits  
+- Strict JSON output format  
+- Post-processing layer to:
+  - Remove duplicates  
+  - Filter hallucinations  
+  - Enforce constraints (length, semantics)  
+- Deterministic XML transformation  
 
-⚠️ Challenges & Solutions
+## ⚠️ Challenges & Solutions
 
-Challenge	Solution
-LLM hallucinations	Post-processing filters
-Duplicate outputs	Deduplication logic
-Incorrect large edits	Strict prompt + length constraints
-JSON parsing issues	Safe parsing fallback
-XML integrity	Controlled injection logic
+| Challenge | Solution |
+|----------|--------|
+| LLM hallucinations | Post-processing filters |
+| Duplicate outputs | Deduplication logic |
+| Incorrect large edits | Strict prompt + length constraints |
+| JSON parsing issues | Safe parsing fallback |
+| XML integrity | Controlled injection logic |
 
 📌 Example Output
 ```xml
