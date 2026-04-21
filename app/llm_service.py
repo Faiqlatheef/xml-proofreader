@@ -108,31 +108,31 @@ def clean_llm_output(errors):
         original = err.get("original", "").strip()
         correction = err.get("correction", "").strip()
 
-        # ❌ Skip empty
+        # Skip empty
         if not original or not correction:
             continue
 
-        # ❌ Skip same
+        # Skip same
         if original.lower() == correction.lower():
             continue
 
-        # ❌ Skip long phrases (avoid sentence rewriting)
+        # Skip long phrases (avoid sentence rewriting)
         if len(original.split()) > 5:
             continue
 
-        # ❌ Skip punctuation-only fixes
+        # Skip punctuation-only fixes
         if correction.strip() in [original + ".", original + ","]:
             continue
 
-        # ❌ Skip aggressive rewrites (meaning change)
+        # Skip aggressive rewrites (meaning change)
         if len(correction) > len(original) * 1.5:
             continue
 
-        # ❌ Skip abbreviation replacements (IP, AI, etc.)
+        # Skip abbreviation replacements (IP, AI, etc.)
         if correction.isupper() and len(correction) <= 5:
             continue
 
-        # ❌ Skip if removing too much content
+        # Skip if removing too much content
         if len(correction) < len(original) * 0.5:
             continue
 
