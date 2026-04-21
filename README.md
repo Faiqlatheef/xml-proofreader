@@ -20,10 +20,20 @@ A production-ready AI-powered system that detects and annotates errors in XML do
 ---
 
 ## 🏗️ Architecture
-```text
-XML Input → Extract Paragraphs → LLM (OpenRouter / LLaMA 3.1) → Post-processing (filter + dedupe + validation) → Inject <error> tags → Output XML
-```
 
+```text
+XML Input
+   ↓
+Extract Paragraphs
+   ↓
+LLM (OpenRouter / LLaMA 3.1)
+   ↓
+Post-processing (filter + dedupe + validation)
+   ↓
+Inject <error> tags
+   ↓
+Output XML
+```
 ---
 
 ## ⚙️ Tech Stack
