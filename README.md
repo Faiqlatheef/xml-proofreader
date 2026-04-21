@@ -60,23 +60,25 @@ app/
 
 ```bash
 pip install -r requirements.txt
-2. Add environment variables
+
+### 2. Add environment variables
 
 Create .env file:
 
 OPENROUTER_API_KEY=your_api_key_here
+
+
 ▶️ Usage
 🔹 CLI
 python -m app.cli --input sample_input.xml --lang en --style "Style Guide.docx"
 
 Output:
-
 sample_input.corrected.xml
+
 🔹 UI (Recommended)
 python -m streamlit run app/ui.py
 
 Features:
-
 Upload XML + Style Guide
 View corrected XML
 Highlighted errors
