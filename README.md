@@ -34,6 +34,8 @@ Inject <error> tags
    ↓
 Output XML
 ```
+The system follows a modular GenAI pipeline designed for reliability and scalability. XML documents are first parsed and segmented into paragraph-level units, which are then processed by a Large Language Model (LLM) for structured error detection. A post-processing layer ensures deterministic behavior by filtering hallucinations, removing duplicates, and enforcing minimal edits. Finally, validated corrections are injected back into the XML as structured `<error>` nodes while preserving document integrity.
+
 ---
 
 ## ⚙️ Tech Stack
