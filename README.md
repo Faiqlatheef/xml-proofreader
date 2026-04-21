@@ -60,6 +60,7 @@ app/
 
 ```bash
 pip install -r requirements.txt
+```
 
 ### 2. Add environment variables
 
