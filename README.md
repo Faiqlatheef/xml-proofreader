@@ -110,16 +110,10 @@ JSON parsing issues	Safe parsing fallback
 XML integrity	Controlled injection logic
 
 📌 Example Output
-
+```xml
 <error type="grammar" correction="has">have</error>
 <error type="spelling" correction="HIPAA">HIPPA</error>
-
-🚀 Future Improvements
-
-Confidence scoring
-Model ensemble validation
-Real-time API deployment
-UI enhancements (analytics dashboard)
+```
 
 👨‍💻 Author
 
