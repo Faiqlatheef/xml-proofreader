@@ -37,15 +37,17 @@ XML Input → Extract Paragraphs → LLM (OpenRouter / LLaMA 3.1) → Post-proce
 ---
 
 ## 📂 Project Structure
-app/
-├── cli.py # CLI entry point
-├── ui.py # Streamlit UI
-├── xml_parser.py # XML load/save
-├── extractor.py # Extract paragraphs
-├── llm_service.py # LLM interaction + filtering
-├── injector.py # Inject <error> tags
-├── style_guide.py # Load DOCX style guide
 
+```text
+app/
+├── cli.py              # CLI entry point
+├── ui.py               # Streamlit UI
+├── xml_parser.py       # XML load/save
+├── extractor.py        # Extract paragraphs
+├── llm_service.py      # LLM interaction + filtering
+├── injector.py         # Inject <error> tags
+├── style_guide.py      # Load DOCX style guide
+```
 
 ---
 
