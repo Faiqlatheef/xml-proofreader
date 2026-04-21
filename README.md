@@ -40,8 +40,6 @@ XML Input → Extract Paragraphs → LLM (OpenRouter / LLaMA 3.1)
 ---
 
 ## 📂 Project Structure
-
-
 app/
 ├── cli.py # CLI entry point
 ├── ui.py # Streamlit UI
