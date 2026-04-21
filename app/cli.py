@@ -7,7 +7,7 @@ from app.injector import inject_errors_xml
 from app.style_guide import load_style_guide
 
 
-# for UI reuse
+# UI reuse
 def process_file(input_path, style_path, lang, output_path):
     tree = load_xml(input_path)
     paragraphs = extract_paragraphs(tree)
